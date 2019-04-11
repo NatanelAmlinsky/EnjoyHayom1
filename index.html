@@ -1,36 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>A Contact Form Using Phpmailer - reusable form</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <link rel="stylesheet" href="form.css" >
-        <script src="form.js"></script>
-    </head>
-    <body >
-        <div class="container">
-            <div class="form-container">
-                <h1>
-                    Contact Us
-                </h1>
-                <form method="post" id="reused_form" >
-                    <label for="name">Your Name:</label>
-                    <input id="name" type="text" name="Name" required maxlength="50">
-                    <label for="email">Email Address:</label>
-                    <input id="email" type="email" name="Email" required maxlength="50">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="Message" rows="10" maxlength="6000" required></textarea>
-                    <button class="button-primary" type="submit" >Post</button>
-                </form>
-                <div id="success_message" style="display:none">
-                    <h3>Submitted the form successfully!</h3> 
-                    <p> We will get back to you soon. </p>
-                </div>
-                <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
-            </div>
-        </div>
-    </body>
+﻿<!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> --><!doctype html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <title>Enjoy Hayom</title>
+    <link rel="icon" type="image/png" href="img/happy.png"/>
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+
+
+  <header class="v-header container">
+      <div class="fullscreen-video-wrap">
+
+          <video id="video-bg-elen" preload="auto" autoplay="true" loop="loop" muted="muted">
+              <source src="videos/walking.mov" type="video/mp4" />
+          </video> 
+
+      </div>
+    <div class="header-overlay"></div>
+    <div class="header-content text-md-center">
+      <h1>ברוכים הבאים </h1>
+
+        <p dir="rtl">
+ENJOY HAYOM קוראת לצעירים מישראל ומכל ארצות העולם למדבר, לבוא לדרוש את אלוהים ביחד כגוף אחד. יחד, במשך שלושה ימים נהלל ונשבח את האדון, נתחבר אליו ברוח, בגוף ובנפש. "נחזור אחורה בזמן" לתקופת אברהם אבינו: נתנתק מהכל, נישן באוהלים בדואים, ונתפלל שהזמן הזה שאנו מקדישים לאלוהים ישנה את חייך האישיים והרוחניים, יחדש את כוחותיך. המסרים והדרשות ינתנו על ידי צעירים מלאים ברוח אלוהים וההתחברות היא עם צעירים משיחיים מכל הארץ וגם מחוצה לה, שיש להם את אותה התשוקה ואהבה לאדון. נושא הכנס השנה, "פנים אל פנים", מבוסס על שמות ל"ג 11 "וְדִבֶּר יְהוָה אֶל-מֹשֶׁה פָּנִים אֶל-פָּנִים, כַּאֲשֶׁר יְדַבֵּר אִישׁ אֶל-רֵעֵהוּ". התקווה והתפילה שלנו היא שלכל צעיר תהיה חוויה אישית, פנים אל פנים עם אלוהים.</p>
+        
+       
+    </div>
+  </header>
+
+  <section class="section section-a">
+    <div class="container">
+      <h1>הירשמו כאן</h1>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezKu3xFvoDVtubF5WBNNDy0VV5IqaYK_HJTAfS11E626RY0Q/viewform?embedded=true" width="640" height="1969" frameborder="0" marginheight="0" marginwidth="0">טוען...</iframe>
+  </section>
+
+  <div class="main">
+      <div class="info"><center>Contact us</center></div>
+      <form action="mail_handler.php" method="post" name="form" class="form-box">
+          <label for="name">Name</label><br>
+          <input type="text" name="name" class="inp" placeholder="Enter Your Name" required><br>
+          <label for="email">Email ID</label><br>
+          <input type="email" name="email" class="inp" placeholder="Enter Your Email" required><br>
+          <label for="phone">Phone</label><br>
+          <input type="tel" name="phone" class="inp" placeholder="Enter Your Phone" required><br>
+          <label for="message">Message</label><br>
+          <textarea name="msg" class="msg-box" placeholder="Enter Your Message Here..." required></textarea><br>
+          <input type="submit" name="submit" value="Send" class="sub-btn">
+      </form>
+  </div>
+
+
+ 
+
+
+</body>
+
 </html>
